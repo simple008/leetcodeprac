@@ -7,7 +7,6 @@
  *复杂度分析：
  *反思：  1.这两种用法时间差距很多myPow(x,n/2)*myPow(x,n/2)   myPow(myPow(x,n/2),2)
  *         2.要有函数的出口 n==2  否在在循环到最后一次是 会出现pow(x,2) 如果没有2 循环会死
- *
  */
 //第一次
 public class Solution {
