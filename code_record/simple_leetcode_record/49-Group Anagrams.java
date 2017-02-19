@@ -12,7 +12,7 @@
        map.get(sp).add(s);
        }
    List<String> li=new ArrayList<String>(s); //map.put(sp,new ArrayList<String>(s));
-   map.put(sp,li);
+    map.put(sp,li);
 
  */
 
