@@ -1,0 +1,19 @@
+//空格替换，toCharArray 方法 把字符串转成字符串数组  然后找空格  替换
+
+public class Solution {
+    public String replaceSpace(StringBuffer str) {
+    	if(str.length()==0||str==null) return str.toString();
+        String st=str.toString();
+        char[] s=st.toCharArray();
+        str =new StringBuffer();
+        for(int i=0;i<s.length;i++){
+            if(s[i]==' '){
+
+            str.append("%20");
+        }
+            else str.append(s[i]);
+        }
+
+        return str.toString();
+    }
+}

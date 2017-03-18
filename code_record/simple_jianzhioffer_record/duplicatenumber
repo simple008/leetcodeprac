@@ -1,0 +1,41 @@
+找出数组中任意的一个重复数字  范围在0~n-1
+
+
+
+public boolean duplicate(int numbers[],int length,int [] duplication) {
+    	int flag[]=new int[length];
+        for(int i=0;i<length;i++){
+            flag[i]=-1;
+        }
+        for(int i=0;i<length;i++){
+            if(flag[numbers[i]]==-1&&flag[numbers[i]]!=-2)
+                flag[numbers[i]]=numbers[i];
+            else flag[numbers[i]]=-2;
+        }
+        for(int i=0;i<length;i++){
+            if(flag[i]==-2){
+                duplication[0]=i;
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
+
+
+public boolean duplicate(int numbers[],int length,int [] duplication) {
+    	if(numbers==null||numbers.length==0) return false;
+        for(int i=0;i<length;i++){
+            while(numbers[i]!=i){
+                if(numbers[i]==numbers[numbers[i]]){
+                    duplication[0]=numbers[i];
+                    return true;
+                }
+                int temp=numbers[i];
+                numbers[i]=numbers[temp];
+                numbers[temp]=temp;
+            }
+        }
+        return false;
+    }

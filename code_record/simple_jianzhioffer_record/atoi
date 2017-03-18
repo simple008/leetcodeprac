@@ -1,0 +1,33 @@
+开头有没有连续空格
+开头有没有 + -
+
+
+
+public class Solution {
+    public int StrToInt(String str) {
+        if(str==null||str.length()==0) return 0;
+        int i=0;
+        while(str.charAt(i)==' ')
+            i++;
+        boolean flag=true;
+        if(str.charAt(i)=='-'){
+            flag=false;
+            i++;
+        }
+        else if(flag&&str.charAt(i)=='+')
+            i++;
+        ;
+
+        int sum=0;
+        for(;i<str.length();i++){
+            sum*=10;
+            if(str.charAt(i)>='0'&&str.charAt(i)<='9'){
+                sum+=str.charAt(i)-'0';
+            }else{
+                return 0;
+            }
+
+        }
+        return flag?sum:-sum;
+    }
+}

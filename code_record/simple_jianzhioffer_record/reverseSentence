@@ -1,0 +1,22 @@
+去掉空格反转字符串
+
+注意几个问题：
+1.字符串是否为空
+2.字符串去掉空格之后是否为空
+3.split的用法  可以返回字符串数组  \\s+去掉连续的空
+
+
+
+public class Solution {
+    public String ReverseSentence(String str) {
+        if(str.length()==0||str==null) return str;
+        String []arr=str.split("\\s+");
+        if(arr.length==0) return str;
+        StringBuilder sb=new StringBuilder();
+        for(int i=arr.length-1;i>0;i--){
+            sb.append(arr[i]);
+            sb.append(' ');
+        }
+        return sb.append(arr[0]).toString();
+    }
+}
