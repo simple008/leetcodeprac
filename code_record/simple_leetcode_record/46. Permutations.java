@@ -55,3 +55,32 @@ public class Solution {
         }
     }
 }
+
+public class Solution {
+    public List<List<Integer>> permute(int[] num) {
+
+        List<List<Integer>> list =new ArrayList<List<Integer>>();
+        if(num==null || num.length==0) return list;
+        boolean[] visited = new boolean[num.length];
+        List<Integer> tmp=new ArrayList<Integer>();
+        Arrays.sort(num);
+        helper(num,visited,tmp,list);
+        return list;
+    }
+    public void helper(int[] num,boolean[] visited,List<Integer> tmp,List<List<Integer>> list){
+        if(tmp.size()==num.length){
+            list.add(new ArrayList<Integer>(tmp));
+            return ;
+        }
+        for(int i = 0;i<num.length;i++){
+            if(visited[i]) continue;
+            /*if(i>0&&num[i]==num[i-1]&&visited[i-1]==false)
+                continue;*/
+            tmp.add(num[i]);
+            visited[i]=true;
+            helper(num,visited,tmp,list);
+            visited[i]=false;
+            tmp.remove(tmp.size()-1);
+        }
+    }
+}

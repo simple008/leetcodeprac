@@ -1,14 +1,14 @@
 /*Created by ${USER} on ${DATE}.
- *题意：
+ *题意：给定开始的单词集合，和单词列表判断经过多少次变换能够得到结束单词
  *注意：
  *思路：
- *一刷：
+ *一刷：一个开始集合把当次得到的单词放进来，结束集合放最后的单词。把所有遍历过得单词都记录下来作为一个visited集合
  *二刷：
  *复杂度分析：
  *反思：
  */
 
-
+//第一次
 public class Solution {
     public int ladderLength(String beginWord, String endWord, Set<String> wordList) {
         Set<String> beginSet=new HashSet<>();
