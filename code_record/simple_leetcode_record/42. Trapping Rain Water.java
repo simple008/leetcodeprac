@@ -66,3 +66,43 @@ public class Solution {
         return total;
     }
 }
+/*
+没仔细看
+    O(1) space的方法来自Discuss里的@shpolsky
+
+1. 这里我们一次遍历数组， 主要使用一个变量countDown来记录遍历时遇到的递减序列
+2. 当ratings[i] < ratings[i - 1]时，我们遇到的就是递减序列，这时我们countDown增加一，
+3. 否则，ratings[i] >= ratings[i - 1]，大于或者等于这两种情况里，我们都需要对之前遇到的递减情况进行处理
+     1.处理之前含有递减序列的情况
+        1.这里我们用prev这个变量记录了递减序列排头元素peak，有多少块糖
+        2. 然后我们利用等差数列求和公式来计算这整个递减序列里我们需要补发多少块糖，countDown是长度n，也是最后一个元素an
+        3. 之后还要判断，当countDown >= peak的时候，就是这个递减序列里，需要最多块糖的元素和peak的当前糖数比较，假如peak的糖数少，我们要给peak补充countDown - prev + 1块糖，或者理解为把peak所在位置的糖数从 prev 替换为 countDown + 1。
+     2. 接下来我们处理一般情况，就是 ratings[i] = ratings[i - 1]时，prev为1，否则prev加1，我们再把prev添加到结果total中
+4. 最后也要判断一下，是否数组最后的一部分为递减序列，假如是，则按照之前的代码处理。
+5. 返回结果。*/
+public class Solution {
+    public int candy(int[] ratings) {
+        if (ratings == null || ratings.length == 0) return 0;
+        int total = 1, prev = 1, countDown = 0;
+
+        for (int i = 1; i < ratings.length; i++) {
+            if (ratings[i] >= ratings[i - 1]) {
+                if (countDown > 0) {
+                    total += countDown * (countDown + 1) / 2;
+                    if (countDown >= prev) total += countDown - prev + 1;
+                    countDown = 0;
+                    prev = 1;
+                }
+                prev = (ratings[i] == ratings[i - 1]) ? 1 : prev + 1;
+                total += prev;
+            } else countDown++;
+        }
+
+        if (countDown > 0) {
+            total += countDown * (countDown + 1) / 2;
+            if (countDown >= prev) total += countDown - prev + 1;
+        }
+
+        return total;
+    }
+}

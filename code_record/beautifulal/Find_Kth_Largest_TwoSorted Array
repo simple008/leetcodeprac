@@ -1,0 +1,16 @@
+//在两个有序数组中查找第k大的数
+
+public int findth(int a[], int b[], int A_start, int B_start, int k){
+    if(A_start >= A.length) return B[B_start + k- 1];
+    if(B_start >= B.length) return A[A_start + k- 1 ];
+
+    int A_key = A_start + k / 2 - 1 < A.length ? A[A_start + k/2 - 1]: Integer.MAX_VALUE;
+    int B_key = B_start + k / 2 - 1 < B.length ? B[B_start + k/2 - 1]: Integer.MAX_VALUE;
+
+    if( k == 1) return Math.min(A_start, B_start);
+    if(A_key < B_key)
+        return findkth(A, B, A_start+ k/2 - 1, B_start, k - k/2);
+    if(A_key > B_key)
+            return findkth(A, B, A_start, B_start + k/2 - 1, k - k/2);
+
+}

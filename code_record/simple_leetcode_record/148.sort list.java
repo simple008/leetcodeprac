@@ -5,7 +5,7 @@
  *一刷：
  *二刷：
  *复杂度分析：
- *反思：
+ *反思：注意链表中间节点的找法，尤其是两个节点的情况
  */
 
 //quick sort
@@ -86,5 +86,46 @@ public class Solution {
         }
         return head.next;
 
+    }
+}
+//第二次
+public class Solution {
+    public ListNode sortList(ListNode head) {
+        if(head == null || head.next ==null) return head;  //判断是不是一个节点或者空
+        ListNode fast = new ListNode(0);
+        fast.next = head;                         //指向head或者next指向head mid节点不一样；找中间节点就是要用.next 和.next.next 来判断
+        ListNode slow = fast;
+        while(fast != null && fast.next != null){    //注意如果fast是head节点，这里还要判断fast.next fast.next.next
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+      /* System.out.println(fast.val);
+       System.out.println(slow.val);*/
+
+        fast = slow.next;
+        slow.next = null;
+
+        ListNode node1 = sortList(head);
+        ListNode node2 = sortList(fast);
+        return mergeList(node1,node2);
+    }
+    public ListNode mergeList(ListNode node1,ListNode node2){
+        ListNode dummy = new ListNode(0);
+        ListNode last = dummy;
+        while(node1 != null && node2 != null){
+            if(node1.val <= node2.val){
+                last.next = node1;
+                node1 = node1.next;
+            }else {
+                last.next = node2;
+                node2 = node2.next;
+            }
+            last = last.next;
+        }
+        if(node1 != null)
+            last.next = node1;
+        if(node2 != null)
+            last.next = node2;
+        return dummy.next;
     }
 }
