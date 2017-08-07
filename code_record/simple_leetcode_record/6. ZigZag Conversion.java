@@ -22,9 +22,9 @@ public class Solution {
             while(i<len)
             {
                 sb.append(s.charAt(i));
-                if(j!=0&&j!=(numRows-1)&&(i+rot-2*j)<len)
+                if(j!=0&&j!=(numRows-1)&&(i+rot-2*j)<len) // 第一行 最后一行 最后一个轮询如果超长除外
                 {
-                    sb.append(s.charAt(i+rot-2*j));
+                    sb.append(s.charAt(i+rot-2*j)); //z中间的一部分
                 }
 
                 i+=rot;
