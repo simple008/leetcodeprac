@@ -13,13 +13,13 @@
 public class Solution {
     public int firstMissingPositive(int[] nums) {
         Arrays.sort(nums);
-        for(int i=0;i<nums.length;i++){
-            if(nums[i]==1){
-                int a=1;
-                for(int j=i;j<nums.length;j++){
-                    if(j!=nums.length-1&&(nums[j]==nums[j+1]))
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] == 1){
+                int a = 1;
+                for(int j = i; j < nums.length; j++){
+                    if(j != nums.length - 1 && (nums[j] == nums[j + 1]))
                         continue;
-                    else if(nums[j]==a)
+                    else if(nums[j] == a)
                         a++;
                     else return a;
                 }
@@ -35,19 +35,19 @@ public class Solution {
 
 public class Solution {
     public int firstMissingPositive(int[] nums) {
-        if(nums.length==0) return 1;
+        if(nums.length == 0) return 1;
         int temp;
-        for(int i=0;i<nums.length;i++){
-            if(nums[i]>0){
-                while(nums[i]>0&&nums[i]<i+1&&nums[i]!=nums[nums[i]-1]){
-                    temp=nums[i];
-                    nums[i]=nums[nums[i]-1];
-                    nums[temp-1]=temp;    //注意交换的时候 i已经变了，要用原来的i
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] > 0){
+                while(nums[i] > 0&&nums[i] < i+1 && nums[i] != nums[nums[i]-1]){
+                    temp = nums[i];
+                    nums[i] = nums[nums[i]-1];
+                    nums[temp-1] = temp;    //注意交换的时候 i已经变了，要用原来的i
                 }
             }
         }
-        for(int i=0;i<nums.length;i++){
-            if(nums[i]!=i+1)
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] != i+1)
                 return i+1;
         }
         return nums.length+1;
@@ -59,7 +59,7 @@ public class Solution {
         int i = 0;
         while(i < A.length){
             if( A[i] <= 0 || A[i] > A.length) i++;
-            else if(A[A[i]-1] != A[i]) swap(A, i, A[i]-1);
+            else if(A[A[i] - 1] != A[i]) swap(A, i, A[i] - 1);
             else i++;
         }
         i = 0;
