@@ -27,7 +27,7 @@ public class Solution {
         }
         if(open<max){
 
-            backtrack(list,max,open+1,close,str+'(');
+            backtrack(list,max,open+1,close,str+'('); //str 是没加“（”的str  所以回溯过来不用再减去刚才加的内容 可以直接用
         }
         if(close<open){
             //  str.append(')');
