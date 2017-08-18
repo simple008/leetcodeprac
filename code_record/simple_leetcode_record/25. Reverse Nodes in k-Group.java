@@ -1,7 +1,7 @@
 /*Created by ${USER} on ${DATE}.
- *题意：
+ *题意：以k小范围，不断翻转链表
  *注意：
- *思路：
+ *思路：一个reverse函数 一个找k方法结合
  *一刷：
  *二刷：
  *复杂度分析：
@@ -24,23 +24,23 @@ public class Solution {
                     return
                 else head=head.next;
             }
-            temp=head.next;
-            head.next=null;
-            head=temp;
-            temp=pre.next;
-            pre.next=reverse(pre.next);
-            temp.next=head;
-            pre=temp;
+            temp = head.next;
+            head.next = null;
+            head = temp;
+            temp = pre.next;
+            pre.next = reverse(pre.next);
+            temp.next = head;
+            pre = temp;
         }
     }
     public ListNode reverse(ListNode head){
-        ListNode newhead=head;
-        ListNode temp=new ListNode(0);
-        while(head!=null&&head.next!=null){
-            temp=head.next;
-            head.next=temp.next;
-            temp.next=newhead;
-            newhead=temp;
+        ListNode newhead = head;
+        ListNode temp = new ListNode(0);
+        while(head! = null&&head.next! = null){
+            temp = head.next;
+            head.next = temp.next;
+            temp.next = newhead;
+            newhead = temp;
         }
         return newhead;
     }
