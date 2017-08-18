@@ -20,14 +20,14 @@ public class Solution {
     }
 
     private void getResult(List<List<Integer>> result, List<Integer> cur, int candidates[], int target, int start){
-        if(target>0){
-            for(int i=start;i<candidates.length&&candidates[i]<=target;i++){
+        if(target > 0){
+            for(int i = start; i < candidates.length && candidates[i] <= target;i++){
                 cur.add(candidates[i]);
-                getResult(result,cur,candidates,target-candidates[i],i);
-                cur.remove(cur.size()-1);
+                getResult(result,cur,candidates,target - candidates[i],i);
+                cur.remove(cur.size() - 1);
             }
         }
-        else if (target==0){
+        else if (target == 0){
             result.add(new ArrayList<Integer>(cur));
         }
 
@@ -38,20 +38,20 @@ public class Solution {
 public class Solution {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         Arrays.sort(candidates);
-        List<List<Integer>> res=new ArrayList<List<Integer>>();
+        List<List<Integer>> res = new ArrayList<List<Integer>>();
         getCom(candidates,target,0,res,new ArrayList<Integer>());
         return res;
     }
     public void getCom(int [] candidates,int target,int start,List<List<Integer>> res,List<Integer> list){
         // List<Integer> list=new ArrayList<Integer>();
 
-        if(target>0){
-            for(int i=start;i<candidates.length&&candidates[i]<=target;i++){
+        if(target > 0){
+            for(int i = start; i < candidates.length && candidates[i] <= target;i++){
                 list.add(candidates[i]);
-                getCom(candidates,target-candidates[i],i,res,list);
-                list.remove(list.size()-1);
+                getCom(candidates,target - candidates[i],i,res,list);
+                list.remove(list.size() - 1);
             }
-        }else if(target==0){
+        }else if(target == 0){
             res.add(new ArrayList<Integer>(list));
 
         }

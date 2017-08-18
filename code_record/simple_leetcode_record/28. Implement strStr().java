@@ -26,15 +26,15 @@ public class Solution {
 //第二次   64.74%
 public class Solution {
     public int strStr(String haystack, String needle) {
-        int len2=needle.length();
-        if(len2==0) return 0;
-        int index=0;
-        int len1=haystack.length();
-        while(index<=(len1-len2)){
-            for(int i=0;i<len2;i++){
-                if(haystack.charAt(i+index)!=needle.charAt(i))
+        int len2 = needle.length();
+        if(len2 == 0) return 0;
+        int index = 0;
+        int len1 = haystack.length();
+        while(index <= (len1-len2)){
+            for(int i = 0; i < len2; i++){
+                if(haystack.charAt(i + index) != needle.charAt(i))
                     break;
-                if(i==len2-1)
+                if(i == len2 - 1)
                     return index;
             }
             index++;

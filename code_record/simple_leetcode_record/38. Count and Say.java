@@ -6,27 +6,25 @@
  *二刷：
  *复杂度分析：
  *反思：
- *
- *
  */
 //第一次
 public class Solution {
     public String countAndSay(int n) {
-        StringBuilder curr=new StringBuilder("1");
+        StringBuilder curr = new StringBuilder("1");
         StringBuilder prev;
         int count;
         char say;
-        for (int i=1;i<n;i++){
-            prev=curr;
-            curr=new StringBuilder();
-            count=1;
-            say=prev.charAt(0);
+        for (int i = 1; i < n; i++){
+            prev = curr;
+            curr = new StringBuilder();
+            count = 1;
+            say = prev.charAt(0);
 
-            for (int j=1,len=prev.length();j<len;j++){
-                if (prev.charAt(j)!=say){
+            for (int j = 1, len = prev.length(); j < len; j++){
+                if (prev.charAt(j) != say){
                     curr.append(count).append(say);
-                    count=1;
-                    say=prev.charAt(j);
+                    count = 1;
+                    say = prev.charAt(j);
                 }
                 else count++;
             }
@@ -40,27 +38,27 @@ public class Solution {
 //第二次
 public class Solution {
     public String countAndSay(int n) {
-        if(n<=0) return "";
-        String res="1";
-        int start=1;
-        int count=1;
-        StringBuilder sb=new StringBuilder();
-        while(start<n){
-            for(int i=0;i<res.length()-1;i++){
-                if(res.charAt(i)==res.charAt(i+1))
+        if(n <= 0) return "";
+        String res = "1";
+        int start = 1;
+        int count = 1;
+        StringBuilder sb = new StringBuilder();
+        while(start < n){
+            for(int i = 0; i < res.length()-1; i++){
+                if(res.charAt(i) == res.charAt(i + 1))
                     count++;
                 else {
                     sb.append(count);
                     sb.append(res.charAt(i));
-                    count=1;
+                    count = 1;
                 }
             }
             sb.append(count);
             sb.append(res.charAt(res.length()-1));
-            res=sb.toString();
-            sb=new StringBuilder();
+            res = sb.toString();
+            sb = new StringBuilder();
             start++;
-            count=1;
+            count = 1;
         }
         return res;
     }

@@ -13,23 +13,23 @@
 //第一次
 public class Solution {
     public int divide(int dividend, int divisor) {
-        if(divisor==0) return Integer.MAX_VALUE;
-        if(dividend==Integer.MIN_VALUE&&divisor==-1) return Integer.MAX_VALUE;
-        int flag=1; int result=0;
-        if(divisor>0&&dividend<0||divisor<0&&dividend>0) flag=-1;
-        long ndividend=(long)Math.abs((long)dividend);
-        long ndivisor=(long)Math.abs((long)divisor);
+        if(divisor == 0) return Integer.MAX_VALUE;
+        if(dividend == Integer.MIN_VALUE&&divisor == -1) return Integer.MAX_VALUE;
+        int flag = 1; int result = 0;
+        if(divisor > 0 && dividend < 0 || divisor < 0 && dividend > 0) flag = -1;
+        long ndividend = (long)Math.abs((long)dividend);
+        long ndivisor = (long)Math.abs((long)divisor);
 
-        while(ndividend>=ndivisor){
-            int cnt=1;
-            long temp=ndivisor;
-            while((temp<<=1)<=ndividend){
-                cnt<<=1;
+        while(ndividend >= ndivisor){
+            int cnt = 1;
+            long temp = ndivisor;
+            while((temp <<= 1) <= ndividend){
+                cnt <<= 1;
             }
-            result+=cnt;
-            ndividend-=(temp>>1);
+            result += cnt;
+            ndividend -= (temp >> 1);
         }
-        return (flag>0)?result:-result;
+        return (flag > 0) ? result : -result;
 
     }
 }
