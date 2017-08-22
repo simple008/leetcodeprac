@@ -5,31 +5,31 @@ package insteresting;
  */
 public class chtoin {
     public static void main(String[] args) {
-        System.out.println(chineseNumber2Int("Ò»°ÙÎå"));
+        System.out.println(chineseNumber2Int("Ò»ï¿½ï¿½ï¿½ï¿½"));
     }
     private static int chineseNumber2Int(String chineseNumber){
         int result = 0;
-        int temp = 1;//´æ·ÅÒ»¸öµ¥Î»µÄÊý×ÖÈç£ºÊ®Íò
-        int count = 0;//ÅÐ¶ÏÊÇ·ñÓÐchArr
-        char[] cnArr = new char[]{'Ò»','¶þ','Èý','ËÄ','Îå','Áù','Æß','°Ë','¾Å'};
-        char[] chArr = new char[]{'Ê®','°Ù','Ç§','Íò','ÒÚ'};
+        int temp = 1;//ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ç£ºÊ®ï¿½ï¿½
+        int count = 0;//ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½chArr
+        char[] cnArr = new char[]{'Ò»','q','w','e','r','t','y','i','o'};
+        char[] chArr = new char[]{'Ê®','k','h','d','a'};
         for (int i = 0; i < chineseNumber.length(); i++) {
-            boolean b = true;//ÅÐ¶ÏÊÇ·ñÊÇchArr
+            boolean b = true;//ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½chArr
             char c = chineseNumber.charAt(i);
-            for (int j = 0; j < cnArr.length; j++) {//·Çµ¥Î»£¬¼´Êý×Ö
+            for (int j = 0; j < cnArr.length; j++) {//ï¿½Çµï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 if (c == cnArr[j]) {
-                    if(0 != count){//Ìí¼ÓÏÂÒ»¸öµ¥Î»Ö®Ç°£¬ÏÈ°ÑÉÏÒ»¸öµ¥Î»ÖµÌí¼Óµ½½á¹ûÖÐ
+                    if(0 != count){//ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Î»Ö®Ç°ï¿½ï¿½ï¿½È°ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Î»Öµï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                         result += temp;
                         temp = 1;
                         count = 0;
                     }
-                    // ÏÂ±ê+1£¬¾ÍÊÇ¶ÔÓ¦µÄÖµ
+                    // ï¿½Â±ï¿½+1ï¿½ï¿½ï¿½ï¿½ï¿½Ç¶ï¿½Ó¦ï¿½ï¿½Öµ
                     temp = j + 1;
                     b = false;
                     break;
                 }
             }
-            if(b){//µ¥Î»{'Ê®','°Ù','Ç§','Íò','ÒÚ'}
+            if(b){//ï¿½ï¿½Î»{'Ê®','ï¿½ï¿½','Ç§','ï¿½ï¿½','ï¿½ï¿½'}
                 for (int j = 0; j < chArr.length; j++) {
                     if (c == chArr[j]) {
                         switch (j) {
@@ -55,7 +55,7 @@ public class chtoin {
                     }
                 }
             }
-            if (i == chineseNumber.length() - 1) {//±éÀúµ½×îºóÒ»¸ö×Ö·û
+            if (i == chineseNumber.length() - 1) {//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ö·ï¿½
                 result += temp;
             }
         }

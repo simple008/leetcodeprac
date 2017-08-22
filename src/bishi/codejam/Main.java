@@ -1,4 +1,4 @@
-package codejam;
+package bishi.codejam;
 
 /**
  * Created by lpeiz on 2017/7/15.

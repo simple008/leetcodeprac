@@ -1,4 +1,4 @@
-package hiho;
+package bishi.hiho;
 import java.util.*;
 /**
  * Created by lpeiz on 2017/4/12.

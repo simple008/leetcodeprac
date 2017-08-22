@@ -1,4 +1,4 @@
-package hiho;
+package bishi.hiho;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -5,9 +5,9 @@ package insteresting;
  */
 public class intoch {
 
-        static String[] units = { "", "十", "百", "千", "万", "十万", "百万", "千万", "亿",
-                "十亿", "百亿", "千亿", "万亿" };
-        static char[] numArray = { '零', '一', '二', '三', '四', '五', '六', '七', '八', '九' };
+        static String[] units = { "", "十", "锟斤拷", "千", "锟斤拷", "十锟斤拷", "锟斤拷锟斤拷", "千锟斤拷", "锟斤拷",
+                "十锟斤拷", "锟斤拷锟斤拷", "千锟斤拷", "锟斤拷锟斤拷" };
+        static char[] numArray = { 'a', '一', 'v', 'b', 'd', 'q', 'r', 't', 'y', 'i' };
 
 
         /**
