@@ -50,3 +50,15 @@ public class Solution {
         }
     }
 }
+
+public void getCom(List<List<Integer>> result, List<Integer> list, int n, int k, int index){
+    if(list.size()==k){
+        result.add(new ArrayList<Integer>(list));
+        return ;
+    }
+    for(int i = index; i<=n; i++){
+        list.add(i);
+        getCom(result, list, n, k, i+1);
+        list.remove(list.size()-1);
+    }
+}

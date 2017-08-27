@@ -9,14 +9,34 @@
  *
  *
  */
-
+//第一次
+public class Solution {
+    public void rotate(int[][] matrix) {
+        if(matrix==null) return ;
+        int n=matrix.length;
+        for(int i=0;i<n/2;i++){
+            for(int j=i;j<n-i-1;j++){
+                reverse(matrix,i,j);
+            }
+        }
+    }
+    public void reverse (int [][] arr,int a,int b){
+        int num=arr[a][b];
+        int n=arr.length;
+        arr[a][b]=arr[n-b-1][a];
+        arr[n-b-1][a]=arr[n-a-1][n-b-1];
+        arr[n-a-1][n-b-1]=arr[b][n-a-1];
+        arr[b][n-a-1]=num;
+    }
+}
 //第二次
 public class Solution {
     public void rotate(int[][] matrix) {
         if(matrix[0].length==0) return ;
         int top=0;
         int left=0;
-        int len=matrix[0].length;
+        int len = matrix[0].length;
+        int right = len - 1 ;
         for(int i=0;i<len/2;i++){
             for(int j=left;j<right;j++){
                 swap(matrix,i,j,len-1);

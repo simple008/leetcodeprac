@@ -15,11 +15,12 @@ public class Solution {
     public String simplifyPath(String path) {
         String []s=path.split("\\/+");
         ArrayList<String> st=new ArrayList<>();
-        for(String c:s){
+
+        for(String c : s){
             switch(c){
-                case"":
-                case".": continue;
-                case"..":
+                case "" :
+                case "." : continue;
+                case ".." :
                     if(st.size()>0)
                         st.remove(st.size()-1);
                     break;
@@ -28,13 +29,17 @@ public class Solution {
                     break;
             }
         }
-        if(st.size()==0)
+
+        if(st.size() == 0)
             return "/";
+
         StringBuilder sb = new StringBuilder();
+
         for(String sd : st){
             sb.append("/");
             sb.append(sd);
         }
+
         return sb.toString();
     }
 }
