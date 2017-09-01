@@ -1,13 +1,13 @@
 /*Created by ${USER} on ${DATE}.
- *���⣺���k�ν��ף�������
- *ע�⣺
- *˼·��
- *һˢ��
- *��ˢ��
- *���Ӷȷ�����
- *��˼��
+ *题意：最多k次交易，最大获利
+ *注意：
+ *思路：
+ *一刷：
+ *二刷：
+ *复杂度分析：
+ *反思：
  */
-//��һ��
+//第一次
 public class Solution {
     public int maxProfit(int k, int[] prices) {
         if (prices.length<2 || k<=0) return 0;

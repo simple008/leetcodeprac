@@ -1,13 +1,13 @@
 /*Created by ${USER} on ${DATE}.
- *ÌâÒâ£º32Î»ÎŞ·ûºÅÊı°´¶ş½øÖÆreverse
- *×¢Òâ£º
- *Ë¼Â·£ºÎ»ÒÆ
- *Ò»Ë¢£º
- *¶şË¢£º
- *¸´ÔÓ¶È·ÖÎö£º
- *·´Ë¼£º
+ *é¢˜æ„ï¼š32ä½æ— ç¬¦å·æ•°æŒ‰äºŒè¿›åˆ¶reverse
+ *æ³¨æ„ï¼š
+ *æ€è·¯ï¼šä½ç§»
+ *ä¸€åˆ·ï¼š
+ *äºŒåˆ·ï¼š
+ *å¤æ‚åº¦åˆ†æï¼š
+ *åæ€ï¼š
  */
-//µÚÒ»´Î
+//ç¬¬ä¸€æ¬¡
 public class Solution {
     // you need treat n as an unsigned value
     public int reverseBits(int n) {
@@ -24,7 +24,7 @@ public class Solution {
     }
 }
 
-//µÚ¶ş´Î
+//ç¬¬äºŒæ¬¡
 public class Solution {
     // you need treat n as an unsigned value
     public int reverseBits(int n) {

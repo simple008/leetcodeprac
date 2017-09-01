@@ -1,13 +1,13 @@
 /*Created by ${USER} on ${DATE}.
- *ÌâÒâ£º°ÑÒ»¸öÕýÕûÊýÊý×é·Ö³ÉÁ½²¿·Ö£¬Á½²¿·ÖºÍ¶¼ÏàµÈ
- *×¢Òâ£º
- *Ë¼Â·£ºÏÈ¼ÆËã×ÜºÍ£¬ÅÐ¶ÏÄÜ·ñ³ýÒÔ2Õû³ý£¬ÔÙÓÃdp£¬dpÊý×é³¤¶ÈÊÇÊý×éºÍµÄÒ»°ë¼Ó1£¬dp[i]ÊÇtrueµÄÌõ¼þÊÇÔ­À´Êý×é´æÔÚÒ»¸öpÖµdp[i-q]ÊÇtrue ÄÇÃ´Õâ¸öi¿ÉÒÔµ½´ï
- *Ò»Ë¢£º
- *¶þË¢£º
- *¸´ÔÓ¶È·ÖÎö£º
- *·´Ë¼£º
+ *é¢˜æ„ï¼šæŠŠä¸€ä¸ªæ­£æ•´æ•°æ•°ç»„åˆ†æˆä¸¤éƒ¨åˆ†ï¼Œä¸¤éƒ¨åˆ†å’Œéƒ½ç›¸ç­‰
+ *æ³¨æ„ï¼š
+ *æ€è·¯ï¼šå…ˆè®¡ç®—æ€»å’Œï¼Œåˆ¤æ–­èƒ½å¦é™¤ä»¥2æ•´é™¤ï¼Œå†ç”¨dpï¼Œdpæ•°ç»„é•¿åº¦æ˜¯æ•°ç»„å’Œçš„ä¸€åŠåŠ 1ï¼Œdp[i]æ˜¯trueçš„æ¡ä»¶æ˜¯åŽŸæ¥æ•°ç»„å­˜åœ¨ä¸€ä¸ªpå€¼dp[i-q]æ˜¯true é‚£ä¹ˆè¿™ä¸ªiå¯ä»¥åˆ°è¾¾
+ *ä¸€åˆ·ï¼š
+ *äºŒåˆ·ï¼š
+ *å¤æ‚åº¦åˆ†æžï¼š
+ *åæ€ï¼š
  */
-//µÚÒ»´Î
+//ç¬¬ä¸€æ¬¡
 public class Solution {
     public boolean canPartition(int[] nums) {
         int sum=0;
@@ -24,4 +24,4 @@ public class Solution {
         return dp[dp.length-1];
     }
 }
-//µÚ¶þ´Î
+//ç¬¬äºŒæ¬¡

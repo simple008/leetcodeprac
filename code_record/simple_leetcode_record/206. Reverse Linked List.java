@@ -1,13 +1,13 @@
 /*Created by ${USER} on ${DATE}.
- *ÌâÒâ£ºÁ´±íµ¹ÖÃ
- *×¢Òâ£º
- *Ë¼Â·£ºÍ·²å·¨
- *Ò»Ë¢£º
- *¶şË¢£º
- *¸´ÔÓ¶È·ÖÎö£º
- *·´Ë¼£º
+ *é¢˜æ„ï¼šé“¾è¡¨å€’ç½®
+ *æ³¨æ„ï¼š
+ *æ€è·¯ï¼šå¤´æ’æ³•
+ *ä¸€åˆ·ï¼š
+ *äºŒåˆ·ï¼š
+ *å¤æ‚åº¦åˆ†æï¼š
+ *åæ€ï¼š
  */
-//µÚÒ»´Î
+//ç¬¬ä¸€æ¬¡
 public class Solution {
     public ListNode reverseList(ListNode head) {
         ListNode newhead =null;
@@ -21,7 +21,7 @@ public class Solution {
         return newhead;
     }
 }
-//µÚ¶ş´Î
+//ç¬¬äºŒæ¬¡
 public class Solution {
     public ListNode reverseList(ListNode head) {
         ListNode newhead = null;

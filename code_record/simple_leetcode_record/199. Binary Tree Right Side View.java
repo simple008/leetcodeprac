@@ -1,13 +1,13 @@
 /*Created by ${USER} on ${DATE}.
- *ÌâÒâ£ºÒ»¿Ã¶ş²æÊ÷´ÓÓÒ²à¿´ ¿´µ½µÄËùÓĞ½Úµã
- *×¢Òâ£º
- *Ë¼Â·£º
- *Ò»Ë¢£ºµİ¹é ¼ÇÂ¼listµÄ´óĞ¡ºÍ²ãÉî£¬²ãÉîºÍ´óĞ¡ÏàÍ¬Ê±¼Ó½øÈ¥ËµÃ÷ÊÇµÚÒ»´Î±¾²ãµÄµã
- *¶şË¢£º²ã´Î±éÀú ×îºóÒ»¸ö½Úµã
- *¸´ÔÓ¶È·ÖÎö£º
- *·´Ë¼£º
+ *é¢˜æ„ï¼šä¸€æ£µäºŒå‰æ ‘ä»å³ä¾§çœ‹ çœ‹åˆ°çš„æ‰€æœ‰èŠ‚ç‚¹
+ *æ³¨æ„ï¼š
+ *æ€è·¯ï¼š
+ *ä¸€åˆ·ï¼šé€’å½’ è®°å½•listçš„å¤§å°å’Œå±‚æ·±ï¼Œå±‚æ·±å’Œå¤§å°ç›¸åŒæ—¶åŠ è¿›å»è¯´æ˜æ˜¯ç¬¬ä¸€æ¬¡æœ¬å±‚çš„ç‚¹
+ *äºŒåˆ·ï¼šå±‚æ¬¡éå† æœ€åä¸€ä¸ªèŠ‚ç‚¹
+ *å¤æ‚åº¦åˆ†æï¼š
+ *åæ€ï¼š
  */
-//µÚÒ»´Î
+//ç¬¬ä¸€æ¬¡
 public class Solution {
     List<Integer> list=new ArrayList<Integer>();
     public List<Integer> rightSideView(TreeNode root) {
@@ -22,7 +22,7 @@ public class Solution {
 
     }
 }
-//µÚ¶ş´Î
+//ç¬¬äºŒæ¬¡
 public class Solution {
     List<Integer> list = new ArrayList<Integer>();
     public List<Integer> rightSideView(TreeNode root) {

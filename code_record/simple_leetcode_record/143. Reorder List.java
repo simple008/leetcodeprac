@@ -1,13 +1,13 @@
 /*Created by ${USER} on ${DATE}.
- *ÌâÒâ£ºµ÷ÕûÁ´±íË³Ğò£¬123456--162534
- *×¢Òâ£º
- *Ë¼Â·£º
- *Ò»Ë¢£º
- *¶şË¢£ºmergeµÄÊ±ºòËæÊ±¸üĞÂnode1 £¬node1ºÍdummyÊÇÔÚÒ»¿éµÄ£¬²»¸üĞÂ»á³öÎÊÌâ
- *¸´ÔÓ¶È·ÖÎö£º
- *·´Ë¼£º
+ *é¢˜æ„ï¼šè°ƒæ•´é“¾è¡¨é¡ºåºï¼Œ123456--162534
+ *æ³¨æ„ï¼š
+ *æ€è·¯ï¼š
+ *ä¸€åˆ·ï¼š
+ *äºŒåˆ·ï¼šmergeçš„æ—¶å€™éšæ—¶æ›´æ–°node1 ï¼Œnode1å’Œdummyæ˜¯åœ¨ä¸€å—çš„ï¼Œä¸æ›´æ–°ä¼šå‡ºé—®é¢˜
+ *å¤æ‚åº¦åˆ†æï¼š
+ *åæ€ï¼š
  */
-//µÚÒ»´Î
+//ç¬¬ä¸€æ¬¡
 public class Solution {
     public void reorderList(ListNode head) {
         if(head==null||head.next==null) return ;
@@ -57,7 +57,7 @@ public class Solution {
         else dummy.next=head2;
     }
 }
-//µÚ¶ş´Î
+//ç¬¬äºŒæ¬¡
 public class Solution {
     public void reorderList(ListNode head) {
         if(head == null) return ;

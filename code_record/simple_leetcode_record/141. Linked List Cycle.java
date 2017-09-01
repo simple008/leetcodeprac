@@ -1,14 +1,14 @@
 /*Created by ${USER} on ${DATE}.
- *ÌâÒâ£ºÅĞ¶ÏÁ´±íÊÇ·ñÓĞ»·
- *×¢Òâ£º¿ìÂıÖ¸Õë
- *Ë¼Â·£º
- *Ò»Ë¢£º
- *¶şË¢£º
- *¸´ÔÓ¶È·ÖÎö£º
- *·´Ë¼£º
+ *é¢˜æ„ï¼šåˆ¤æ–­é“¾è¡¨æ˜¯å¦æœ‰ç¯
+ *æ³¨æ„ï¼šå¿«æ…¢æŒ‡é’ˆ
+ *æ€è·¯ï¼š
+ *ä¸€åˆ·ï¼š
+ *äºŒåˆ·ï¼š
+ *å¤æ‚åº¦åˆ†æï¼š
+ *åæ€ï¼š
  */
 
-//µÚÒ»´Î
+//ç¬¬ä¸€æ¬¡
 
 public class Solution {
     public boolean hasCycle(ListNode head) {
@@ -25,7 +25,7 @@ public class Solution {
 
     }
 }
-//µÚ¶ş´Î
+//ç¬¬äºŒæ¬¡
 public class Solution {
     public boolean hasCycle(ListNode head) {
         ListNode fast = new ListNode(0);

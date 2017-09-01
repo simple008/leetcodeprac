@@ -1,13 +1,13 @@
 /*Created by ${USER} on ${DATE}.
- *ÌâÒâ£º Ç°Ğò±éÀú¶ş²æÊ÷
- *×¢Òâ£º
- *Ë¼Â·£º
- *Ò»Ë¢£º
- *¶şË¢£º×¢Òâ root==null µÄ·µ»ØÌõ¼ş
- *¸´ÔÓ¶È·ÖÎö£º
- *·´Ë¼£º
+ *é¢˜æ„ï¼š å‰åºéå†äºŒå‰æ ‘
+ *æ³¨æ„ï¼š
+ *æ€è·¯ï¼š
+ *ä¸€åˆ·ï¼š
+ *äºŒåˆ·ï¼šæ³¨æ„ root==null çš„è¿”å›æ¡ä»¶
+ *å¤æ‚åº¦åˆ†æï¼š
+ *åæ€ï¼š
  */
-//µÚÒ»´Î
+//ç¬¬ä¸€æ¬¡
 public class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<Integer>();
@@ -30,7 +30,7 @@ public class Solution {
         return list;
     }
 }
-// µİ¹é
+// é€’å½’
 public class Solution {
     List<Integer> list = new ArrayList<Integer>();
     public List<Integer> preorderTraversal(TreeNode root) {
@@ -49,7 +49,7 @@ public class Solution {
             preorder(root.right);
     }
 }
-//·Çµİ¹é ×¢ÒâÌõ¼ş
+//éé€’å½’ æ³¨æ„æ¡ä»¶
 public class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
         Stack<TreeNode> stack = new Stack<TreeNode>();

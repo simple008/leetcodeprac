@@ -1,11 +1,11 @@
 /*Created by ${USER} on ${DATE}.
- *���⣺��������������
- *ע�⣺
- *˼·���ӿ�ʼ���n*n   �鲢���� nlogn �õݹ飬��һ���������ϵشӿ�ʼ���м�ڵ�����merge���������������
- *һˢ��
- *��ˢ��
- *���Ӷȷ�����
- *��˼��ע�������м�ڵ���ҷ��������������ڵ�����
+ *题意：对链表进行排序
+ *注意：
+ *思路：从开始向后n*n   归并排序 nlogn 用递归，有一个函数不断地从开始和中间节点排序，merge两个有序的子数组
+ *一刷：
+ *二刷：
+ *复杂度分析：
+ *反思：注意链表中间节点的找法，尤其是两个节点的情况
  */
 
 //quick sort
@@ -22,19 +22,19 @@ public class SortList {
         Node p=head.next;
         Node pre=head;
         while(p!=null){
-            Node cur=head;  //�ȽϽڵ㣬ÿ�ζ��Ǵ�ͷ�ڵ㿪ʼ
+            Node cur=head;  //比较节点，每次都是从头节点开始
             Node q=p.next;
-            if(p.data<head.data){ //�����ǵ�������ÿ��ֻ�ܴ�ͷ�ڵ㿪ʼ�Ƚ�
+            if(p.data<head.data){ //由于是单链表，每次只能从头节点开始比较
                 pre.next=q;
                 p.next=head;
                 head=p;
             }else
                 while(cur.next!=p){
-                    if(p.data<cur.next.data){//��P��cur.next���бȽϣ����㵥��������
+                    if(p.data<cur.next.data){//将P与cur.next进行比较，方便单链表插入
                         pre.next=q;
                         p.next=cur.next;
                         cur.next=p;
-                        p=pre;  //��֤preÿ��ָ��Ķ���pǰ���һ���ڵ�
+                        p=pre;  //保证pre每次指向的都是p前面的一个节点
                     }else
                         cur=cur.next;
                 }
@@ -88,14 +88,14 @@ public class Solution {
 
     }
 }
-//�ڶ���
+//第二次
 public class Solution {
     public ListNode sortList(ListNode head) {
-        if(head == null || head.next ==null) return head;  //�ж��ǲ���һ���ڵ���߿�
+        if(head == null || head.next ==null) return head;  //判断是不是一个节点或者空
         ListNode fast = new ListNode(0);
-        fast.next = head;                         //ָ��head����nextָ��head mid�ڵ㲻һ�������м�ڵ����Ҫ��.next ��.next.next ���ж�
+        fast.next = head;                         //指向head或者next指向head mid节点不一样；找中间节点就是要用.next 和.next.next 来判断
         ListNode slow = fast;
-        while(fast != null && fast.next != null){    //ע�����fast��head�ڵ㣬���ﻹҪ�ж�fast.next fast.next.next
+        while(fast != null && fast.next != null){    //注意如果fast是head节点，这里还要判断fast.next fast.next.next
             fast = fast.next.next;
             slow = slow.next;
         }

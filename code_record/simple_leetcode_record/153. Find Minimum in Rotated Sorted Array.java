@@ -1,13 +1,13 @@
 /*Created by ${USER} on ${DATE}.
- *ÌâÒâ£ºÕÒ³öĞı×ªÊı×éÖĞµÄ×îĞ¡Öµ
- *×¢Òâ£º
- *Ë¼Â·£º
- *Ò»Ë¢£º
- *¶şË¢£º
- *¸´ÔÓ¶È·ÖÎö£º
- *·´Ë¼£º¼¸¸öÌØÊâÇé¿ö£¬ÏÖÔÚÕı³£ÓĞĞò£¬
+ *é¢˜æ„ï¼šæ‰¾å‡ºæ—‹è½¬æ•°ç»„ä¸­çš„æœ€å°å€¼
+ *æ³¨æ„ï¼š
+ *æ€è·¯ï¼š
+ *ä¸€åˆ·ï¼š
+ *äºŒåˆ·ï¼š
+ *å¤æ‚åº¦åˆ†æï¼š
+ *åæ€ï¼šå‡ ä¸ªç‰¹æ®Šæƒ…å†µï¼Œç°åœ¨æ­£å¸¸æœ‰åºï¼Œ
  */
-//µÚÒ»´Î
+//ç¬¬ä¸€æ¬¡
 public int findMin(int[] nums) {
         int len=nums.length;
         int left=0;
@@ -30,7 +30,7 @@ public int findMin(int[] nums) {
         return nums[left];
         }
 
-//µÚ¶ş´Î
+//ç¬¬äºŒæ¬¡
 public class Solution {
     public int findMin(int[] nums) {
         if(nums==null || nums.length == 0) return 0;

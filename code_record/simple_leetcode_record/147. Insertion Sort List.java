@@ -1,13 +1,13 @@
 /*Created by ${USER} on ${DATE}.
- *ÌâÒâ£ºÓÃ²åÈëÅÅĞò¶ÔÁ´±í½øĞĞÅÅĞò
- *×¢Òâ£º
- *Ë¼Â·£º
- *Ò»Ë¢£º
- *¶şË¢£º
- *¸´ÔÓ¶È·ÖÎö£º
- *·´Ë¼£º
+ *é¢˜æ„ï¼šç”¨æ’å…¥æ’åºå¯¹é“¾è¡¨è¿›è¡Œæ’åº
+ *æ³¨æ„ï¼š
+ *æ€è·¯ï¼š
+ *ä¸€åˆ·ï¼š
+ *äºŒåˆ·ï¼š
+ *å¤æ‚åº¦åˆ†æï¼š
+ *åæ€ï¼š
  */
-//µÚÒ»´Î
+//ç¬¬ä¸€æ¬¡
 public class Solution {
     public ListNode insertionSortList(ListNode head) {
         if(head==null||head.next==null) return head;
@@ -34,4 +34,4 @@ public class Solution {
         return newhead1.next;
     }
 }
-//µÚ¶ş´Î
+//ç¬¬äºŒæ¬¡

@@ -1,14 +1,14 @@
 /*Created by ${USER} on ${DATE}.
- *ÌâÒâ£º¸ø¶¨Ò»¸ö×Ö·û´®ºÍÒ»¸ö×Ö·û´®×Öµä£¬ÅĞ¶Ï×Ö·û´®ÊÇ·ñÓÉ×Ö·û´®×ÖµäÖĞµÄ×Ö·û´®×é³É
- *×¢Òâ£º
- *Ë¼Â·£º
- *Ò»Ë¢£ºdp
- *¶şË¢£ºdfs  dfsÒª×¢Òâ¼ôÖ¦£¬µ±²»ÔÚ°üº¬Ê±Òª°ÑÇ°ÃæÒ»²¿·ÖÈ¥µô
- * ×¢Òâdfs µÄº¯Êı ÅĞ¶Ï£¨i,j£© ÊÇ·ñÄÜ¹»ÓÉdictÖĞµÄ×Ö·û´®×é³É£¬Ã¿Ò»´Îdfs¶¼ÒªÓĞÇ°°ë²¿·ÖºÍºó°ë²¿·Ö
- *¸´ÔÓ¶È·ÖÎö£º
- *·´Ë¼£º
+ *é¢˜æ„ï¼šç»™å®šä¸€ä¸ªå­—ç¬¦ä¸²å’Œä¸€ä¸ªå­—ç¬¦ä¸²å­—å…¸ï¼Œåˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦ç”±å­—ç¬¦ä¸²å­—å…¸ä¸­çš„å­—ç¬¦ä¸²ç»„æˆ
+ *æ³¨æ„ï¼š
+ *æ€è·¯ï¼š
+ *ä¸€åˆ·ï¼šdp
+ *äºŒåˆ·ï¼šdfs  dfsè¦æ³¨æ„å‰ªæï¼Œå½“ä¸åœ¨åŒ…å«æ—¶è¦æŠŠå‰é¢ä¸€éƒ¨åˆ†å»æ‰
+ * æ³¨æ„dfs çš„å‡½æ•° åˆ¤æ–­ï¼ˆi,jï¼‰ æ˜¯å¦èƒ½å¤Ÿç”±dictä¸­çš„å­—ç¬¦ä¸²ç»„æˆï¼Œæ¯ä¸€æ¬¡dfséƒ½è¦æœ‰å‰åŠéƒ¨åˆ†å’ŒååŠéƒ¨åˆ†
+ *å¤æ‚åº¦åˆ†æï¼š
+ *åæ€ï¼š
  */
-//µÚÒ»´Î  dp
+//ç¬¬ä¸€æ¬¡  dp
 public class Solution {
     public boolean wordBreak(String s, Set<String> wordDict) {
         boolean []flag=new boolean[s.length()+1];
@@ -24,7 +24,7 @@ public class Solution {
         return flag[s.length()];
     }
 }
-//µÚ¶ş´Î
+//ç¬¬äºŒæ¬¡
 
     public boolean wordBreak(String s, List<String> wordDict) {
         if(s == null || wordDict == null)
@@ -39,7 +39,7 @@ public class Solution {
             if(wordDict.contains(frontPart)) {
                 if(wordBreak(backPart, wordDict))
                     return true;
-                wordDict.remove(frontPart);  //¼ôÖ¦²Ù×÷£¬±ÜÃâÔÙ´ÎÖØ¸´ÔËËã
+                wordDict.remove(frontPart);  //å‰ªææ“ä½œï¼Œé¿å…å†æ¬¡é‡å¤è¿ç®—
             }
         }
 

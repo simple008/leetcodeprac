@@ -1,13 +1,13 @@
 /*Created by ${USER} on ${DATE}.
- *ÌâÒâ£ººóĞò±éÀú¶ş²æÊ÷
- *×¢Òâ£º
- *Ë¼Â·£º
- *Ò»Ë¢£º
- *¶şË¢£º
- *¸´ÔÓ¶È·ÖÎö£º
- *·´Ë¼£º
+ *é¢˜æ„ï¼šååºéå†äºŒå‰æ ‘
+ *æ³¨æ„ï¼š
+ *æ€è·¯ï¼š
+ *ä¸€åˆ·ï¼š
+ *äºŒåˆ·ï¼š
+ *å¤æ‚åº¦åˆ†æï¼š
+ *åæ€ï¼š
  */
-// µÚÒ»´Î
+// ç¬¬ä¸€æ¬¡
 public class Solution {
     public List<Integer> postorderTraversal(TreeNode root) {
         LinkedList<Integer> list = new LinkedList<Integer>();
@@ -17,7 +17,7 @@ public class Solution {
             while(root != null){
                 stack.push(root);
                 list.addFirst(root.val);
-                root = root.right;  //°´ÕÕ¸ùÓÒ×óµÄË³ĞòÕ»  ÁĞ±íÍùÇ°¼Ó ±ä³É ×óÓÒ¸ùµÄÁ´±íË³Ğò
+                root = root.right;  //æŒ‰ç…§æ ¹å³å·¦çš„é¡ºåºæ ˆ  åˆ—è¡¨å¾€å‰åŠ  å˜æˆ å·¦å³æ ¹çš„é“¾è¡¨é¡ºåº
             }
 
             if( !stack.isEmpty()){
@@ -31,8 +31,8 @@ public class Solution {
         return list;
     }
 }
-//µÚ¶ş´Î
-//µİ¹é
+//ç¬¬äºŒæ¬¡
+//é€’å½’
 public class Solution {
     List<Integer> list = new ArrayList<Integer>();
     public List<Integer> postorderTraversal(TreeNode root) {
@@ -50,7 +50,7 @@ public class Solution {
 
     }
 }
-//·Çµİ¹é  ÓÃ¸ùÓÒ×óµÄ·½·¨À´±éÀú list.add(index,val);
+//éé€’å½’  ç”¨æ ¹å³å·¦çš„æ–¹æ³•æ¥éå† list.add(index,val);
 public class Solution {
     List<Integer> list = new ArrayList<Integer>();
     public List<Integer> postorderTraversal(TreeNode root) {
