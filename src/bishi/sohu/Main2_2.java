@@ -1,20 +1,27 @@
 package bishi.sohu;
 
+/**
+ * Created by lpeiz on 2017/8/28.
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+
+
+
 //zwl
-public class Main2_1 {
-   static int []nums = new int[10000];
+public class Main2_2 {
+    static int []nums = new int[10000];
     static int m;
     static int n;
     static int [] result=new int [100000];
     static List<Integer> list;
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-         n = in.nextInt();
-         m = in.nextInt();
+        n = in.nextInt();
+        m = in.nextInt();
         for (int i = 0; i < m; i++) {
             nums[i] = in.nextInt();
         }
@@ -80,4 +87,5 @@ public class Main2_1 {
         }*/
     }
 }
+
 

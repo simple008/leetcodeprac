@@ -15,10 +15,13 @@ public class Main2 {
             nums[i] = in.nextInt();
         }
         List<Integer> list = new ArrayList<Integer>();
+
         for(int i = 0; i<nums[0]; i++){
             list.add(nums[0]);
         }
+
         int j = list.size() ==1 ? nums[1]:list.get(1);
+
         int q=1;
         while(list.size() < n) {
             for (int i = 0; i < j; i++) {
