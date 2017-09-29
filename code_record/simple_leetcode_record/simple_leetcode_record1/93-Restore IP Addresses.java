@@ -40,7 +40,7 @@ public class Solution {
                 if(seg==1){
                     seq.append(temp);
                 }else{
-                    seq.append("."+temp);
+                    seq.append("" +temp);
                 }
                 getIpAddress(s,index+i,seg+1);
                 int t=seg==1?0:1;
@@ -70,7 +70,7 @@ public class Solution {
                     String s3=s.substring(j+1,k+1);
                     String s4=s.substring(k+1,len);
                     if(isValid(s1)&&isValid(s2)&&isValid(s3)&&isValid(s4))
-                        list.add(s1+"."+s2+"."+s3+"."+s4);
+                        list.add(s1+ "" +s2+"."+s3+"."+s4);
 
                 }
             }

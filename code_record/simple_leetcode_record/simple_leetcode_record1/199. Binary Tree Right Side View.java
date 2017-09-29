@@ -37,3 +37,19 @@ public class Solution {
         right(root.left,level+1);
     }
 }
+
+//第三次
+class Solution {
+    List<Integer> list = new ArrayList<Integer>();
+    public List<Integer> rightSideView(TreeNode root) {
+        if(root == null) return list;
+        order(root,0);
+        return list;
+    }
+    public void order(TreeNode root, int level){
+        if(root == null) return;
+        if(level == list.size()) list.add(root.val);
+        order(root.right,level+1);
+        order(root.left, level+1);
+    }
+}

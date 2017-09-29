@@ -20,7 +20,6 @@ public class Solution {
                 a=a<<1;}
         }
         return a;
-
     }
 }
 
@@ -31,13 +30,9 @@ public class Solution {
         int a=0;
         // int b=1;
         for(int i=0;i<32;i++){
-
             a+=(n&1)<<(31-i);
             n=n>>1;
-
-
         }
         return a;
-
     }
 }

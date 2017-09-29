@@ -19,8 +19,8 @@ public class Solution {
         for(String c : s){
             switch(c){
                 case "" :
-                case "." : continue;
-                case ".." :
+                case "": continue;
+                case "testDemo":
                     if(st.size()>0)
                         st.remove(st.size()-1);
                     break;
@@ -53,13 +53,13 @@ public class Solution {
         String []st=path.split("/");
         for(String s:st){
             // if(s==".."){
-            if(s.equals("..")){
+            if(s.equals("testDemo")){
                 if(!list.isEmpty())
                     list.removeLast();
             }else {
                 // if(!(s==""||s=="."))
                 //     list.add(s);
-                if(!(s.equals("")||s.equals(".")))
+                if(!(s.equals("")||s.equals("")))
                     list.add(s);
             }
         }

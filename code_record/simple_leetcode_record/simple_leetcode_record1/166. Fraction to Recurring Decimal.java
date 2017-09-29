@@ -1,14 +1,14 @@
 /*Created by ${USER} on ${DATE}.
- *ÌâÒâ£º
- *×¢Òâ£º
- *Ë¼Â·£º
- *Ò»Ë¢£º
- *¶þË¢£º
- *¸´ÔÓ¶È·ÖÎö£º
- *·´Ë¼£º
+ *ï¿½ï¿½ï¿½â£º
+ *×¢ï¿½â£º
+ *Ë¼Â·ï¿½ï¿½
+ *Ò»Ë¢ï¿½ï¿½
+ *ï¿½ï¿½Ë¢ï¿½ï¿½
+ *ï¿½ï¿½ï¿½Ó¶È·ï¿½ï¿½ï¿½ï¿½ï¿½
+ *ï¿½ï¿½Ë¼ï¿½ï¿½
  */
 
-//µÚÒ»´Î
+//ï¿½ï¿½Ò»ï¿½ï¿½
 public class Solution {
     public String fractionToDecimal(int numerator, int denominator) {
         StringBuilder str =new StringBuilder();
@@ -21,7 +21,7 @@ public class Solution {
 
         long remainder=num%den;
         if(remainder==0) return str.toString();
-        str.append(".");
+        str.append("");
         HashMap<Long,Integer> hash=new HashMap<>();
 
         while(!hash.containsKey(remainder)){
@@ -36,4 +36,4 @@ public class Solution {
         return str.toString().replace("(0)","");
     }
 }
-//µÚ¶þ´Î
+//ï¿½Ú¶ï¿½ï¿½ï¿½
