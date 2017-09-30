@@ -1,0 +1,12 @@
+2的幂次
+n&（n-1）
+public class Solution {
+    public boolean isPowerOfTwo(int n) {
+        if(n<=0) return false;
+        else
+        return (n&(n-1))==0;
+    }
+}
+2的4次幂
+n&(n-1)
+n & 0x55555555
