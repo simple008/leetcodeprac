@@ -1,14 +1,14 @@
 /*Created by ${USER} on ${DATE}.
- *é¢˜æ„ï¼šé“¾å¼ pairçš„æœ€å¤§é•¿åº¦
- *æ³¨æ„ï¼š
- *æ€è·¯ï¼š
- *ä¸€åˆ·ï¼š
- *äºŒåˆ·ï¼š
- *å¤æ‚åº¦åˆ†æžï¼š
- *åæ€ï¼š
+ *ÌâÒâ£º¸ø¶¨ÕâÖÖpairsÄÚ²¿ÓÐÐò [1,2][2,3][3,4] ÕÒ³ö[a,b][c,d] b<c ÕâÖÖ×éºÏpairsµÄ×î´ó³¤¶È£¬[1,2][3,4]
+ *×¢Òâ£º
+ *Ë¼Â·£º¶¯Ì¬¹æ»®£¬½ØÖ¹µ½µ±Ç°Î»ÖÃ ËùÐÎ³ÉµÄ·ûºÏÒªÇóµÄ×î´óµÄpairsµÄ³¤¶È
+ *Ò»Ë¢£º Á½²ãÑ­»· Ò»Î»dp
+ *¶þË¢£º
+ *¸´ÔÓ¶È·ÖÎö£º
+ *·´Ë¼£º
  */
 
-//ç¬¬ä¸€æ¬¡
+//µÚÒ»´Î
 class Solution {
     public int findLongestChain(int[][] pairs) {
         if(pairs == null || pairs.length == 0) return 0;
@@ -29,9 +29,9 @@ class Solution {
                     dp[i] = Math.max(dp[i], dp[j] + 1);
                 else
                     dp[i] = Math.max(dp[i], dp[j]);
-                max = Math.max(max, dp[i]);
+                // max = Math.max(max, dp[i]);
             }
         }
-        return max;
+        return dp[length-1];
     }
 }
