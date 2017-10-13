@@ -1,0 +1,7 @@
+//机器人的运动范围
+public class 66robot range {
+    public int movingCount(int threshold, int rows, int cols)
+    {
+        
+    }
+}
